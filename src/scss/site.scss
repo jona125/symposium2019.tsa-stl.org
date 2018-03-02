@@ -1,0 +1,302 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+header {
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+    background-color: $gray-500;
+
+    > .banner-background {
+        position: absolute;
+        left: 0;
+        top: -10%;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .banner {
+        padding: 0 20px;
+        text-align: center;
+        color: $white;
+        z-index: 2;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: 450px;
+        > .banner-background {
+            top: -40%;
+        }
+    }
+
+    @include media-breakpoint-between(md, lg) {
+        > .banner-background {
+            width: 1200px;
+            transform: translate(-35%, 0%);
+            left: 35%;
+            top: -120px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 2em 0;
+        h1 {
+            font-size: $h1-font-size * 0.8;
+        }
+        h2 {
+            font-size: $h2-font-size * 0.8;
+        }
+        > .banner-background {
+            width: 800px;
+            transform: translate(-35%, 0%);
+            left: 35%;
+        }
+    }
+}
+
+nav.navbar > .container {
+    @include media-breakpoint-down(xs) {
+        margin-left: unset;
+        margin-right: unset;
+    }
+}
+
+
+section {
+    @include make-container();
+    @include make-container-max-widths();
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.nav-anchor {
+    visibility: none;
+    z-index: -1;
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 4em;
+    margin-top: -4em;
+
+    @include media-breakpoint-down(md) {
+        // To accommodate the expanded navbar
+        height: 22em;
+        margin-top: -22em;
+    }
+}
+
+.logo-in-p {
+    width: 18em;
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    display: none;
+
+    @include media-breakpoint-between(sm,md) {
+        display: block;
+    }
+    @include media-breakpoint-only(sm) {
+        width: 15em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+.logo-in-div {
+    display: block;
+    @include media-breakpoint-between(sm,md) {
+        display: none;
+    }
+}
+
+$timeline-event-padding: 0.25em;
+
+.timeline {
+    // font-size: 1.25em;
+    a {
+        color: unset;
+    }
+
+    tr > td:first-child {
+        text-align: right;
+    }
+    tr:nth-child(odd) > td:first-child {
+        transform: translateX(45%);
+        padding-top: $timeline-event-padding;
+        padding-bottom: $timeline-event-padding;
+    }
+    tr:nth-child(even) {
+        > td:nth-child(1) {
+            border-right: 1px dotted $gray-500;
+        }
+        > td:nth-child(2) {
+            padding-left: 3em;
+            max-width: 65em;
+            padding-top: $timeline-event-padding;
+            padding-bottom: $timeline-event-padding;
+
+            @include media-breakpoint-down(md) {
+                padding-left: 1.5em;
+            }
+        }
+    }
+
+    h5 {
+        line-height: 1.25;
+    }
+
+    p {
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+
+    .title {
+        color: $gray-400;
+        font-size: 0.85em;
+    }
+
+    .topic {
+        font-weight: 500;
+        font-style: italic;
+        margin-bottom: 0.25em;
+    }
+
+    li {
+        margin-left: -0.5em;
+    }
+
+    li + li {
+        // when speaker and title are included
+        // margin-top: 0.75em;
+        margin-top: 0.5em;
+    }
+
+}
+
+#sec-sponsors a,
+.abstract-link {
+    &,
+    &:hover,
+    &:focus {
+        color: unset;
+    }
+}
+
+.abstract {
+    .modal-dialog {
+        @include media-breakpoint-up(xl) {
+            max-width: 1100px;
+        }
+        @include media-breakpoint-only(lg) {
+            max-width: 900px;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 95%;
+        }
+    }
+
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-header,
+    .modal-body {
+        padding-left: 1em;
+        padding-right: 1em;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+    }
+
+    .profile-pic-wrap {
+        width: 10em;
+        float: right;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        display: none;
+
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+
+        @include media-breakpoint-down(xs) {
+            width: 7.5em;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+    }
+
+}
+
+#sec-keynote,
+#sec-opening {
+    .profile-pic {
+        text-align: center;
+    }
+}
+
+.speaker {
+    // col-lg-3 col-md-4 col-sm-6
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(3);
+    }
+    @include media-breakpoint-only(md) {
+        @include make-col(4);
+    }
+    @include media-breakpoint-down(sm) {
+        @include make-col(6);
+    }
+    @include media-breakpoint-down(xs) {
+        @include make-col(10);
+        @include make-col-offset(1);
+    }
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    p {
+        margin: 0;
+    }
+}
+
+.speaker-profile {
+    .card-block {
+        padding: 0.5em;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.map-info {
+    padding: 1em 1em 0 1em;
+}
+
+footer {
+    width: 100%;
+    min-height: 6em;
+    margin-top: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: .85em;
+    background-color: $gray-300;
+
+    p {
+        margin: 0;
+    }
+}
