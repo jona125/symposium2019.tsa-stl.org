@@ -1,5 +1,5 @@
 // Polyfill for position: sticky
-new StickyState(document.querySelectorAll('.sticky'));
+// new StickyState(document.querySelectorAll('.sticky'));
 
 // Navbar auto highlight
 $('body').scrollspy({ target: '#navbar' });
