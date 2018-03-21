@@ -70,6 +70,13 @@ section {
 }
 
 
+#sec-keynote {
+    .row:not(:last-of-type) {
+        margin-bottom: 2em;
+    }
+}
+
+
 .nav-anchor {
     visibility: none;
     z-index: -1;
@@ -273,6 +280,12 @@ $timeline-event-padding: 0.25em;
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+.modal .profile-pic {
+    @include media-breakpoint-down(md) {
+        display: none;
     }
 }
 
