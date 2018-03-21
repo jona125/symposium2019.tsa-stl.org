@@ -118,10 +118,10 @@ section {
     }
 }
 
-$timeline-event-padding: 0.25em;
+$timeline-event-padding: 0.1em;
 
 .timeline {
-    // font-size: 1.25em;
+    font-size: 1.2rem;
     a {
         color: unset;
     }
@@ -160,7 +160,7 @@ $timeline-event-padding: 0.25em;
     }
 
     .title {
-        color: $gray-400;
+        color: gray("600");
         font-size: 0.85em;
     }
 
