@@ -1,17 +1,17 @@
 {
-  "name": "symposium2017.tsa-stl.org",
+  "name": "symposium2019.tsa-stl.org",
   "version": "1.0.0",
-  "description": "Symposium website for TSA-STL 2017",
-  "author": "Liang-Bo Wang",
+  "description": "Symposium website for TSA-STL 2019",
+  "author": "Liang-Bo Wang, Che-Pin Chang",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ccwang002/symposium2017.tsa-stl.org.git"
+    "url": "git+https://github.com/jona125/symposium2019.tsa-stl.org.git"
   },
   "bugs": {
-    "url": "https://github.com/ccwang002/symposium2017.tsa-stl.org/issues"
+    "url": "https://github.com/jona125/symposium2019.tsa-stl.org/issues"
   },
-  "homepage": "http://symposium2017.tsa-stl.org/",
+  "homepage": "http://symposium2019.tsa-stl.org/",
   "scripts": {
     "clean": "rimraf dist/",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
