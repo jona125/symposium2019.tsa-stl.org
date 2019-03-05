@@ -6,9 +6,9 @@ $('body').scrollspy({ target: '#navbar' });
 
 // Google Map
 function initMap() {
-    var center = {lat: 38.634150, lng: -90.262376};
+    var center = {lat: 38.634104, lng: -90.261162};
     var wustl = {lat: 38.634468, lng: -90.262376};
-    var parking = {lat: 38.633744, lng: -90.260160};
+    var parking = {lat: 38.633702, lng: -90.259568};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: center,
